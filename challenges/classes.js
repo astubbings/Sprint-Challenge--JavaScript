@@ -1,4 +1,6 @@
 // 1. Copy and paste your prototype in here and refactor into class syntax.
+// If you have a line 1 error ask your tl channel
+
 
 class CuboidMaker2 {
     constructor(attrCM) {

@@ -42,7 +42,7 @@ console.log(rex.weight);
 console.log(velo.diet);
 
 // How long was a stegosaurus?
-console.log(steg.weight);
+console.log(steg.length);
 
 // What time period did tyrannosaurus live in?
 console.log(rex.period);
@@ -137,10 +137,8 @@ The zoos need a list of all their animal's names (animal_name only) converted to
 
 */
 
-const lowCaseAnimalNames = [];
-
-zooAnimals.map(zooAnimals => {
-  lowCaseAnimalNames.push(`${zooAnimals.animal_name.toLowerCase()}`)
+const lowCaseAnimalNames = zooAnimals.map(zooAnimals => {
+  zooAnimals.animal_name.toLowerCase();
 })
 
 console.log(lowCaseAnimalNames);
@@ -161,10 +159,8 @@ console.log(lowPopulationAnimals);
 The zoos need to know their total animal population across the United States. Find the total population from all the zoos using the .reduce() method. Remember the reduce method takes two arguments: a callback (which itself takes two args), and an initial value for the count.
 
 */
-let populationTotal = 0;
-populationTotal = zooAnimals.reduce((accumulator, currentPop) => {
-  return accumulator + currentPop.population;
-}, 0);
+const populationTotal = zooAnimals.reduce((accumulator, currentPop) => {
+  return accumulator + currentPop.population;}, 0);
 
 console.log(populationTotal);
 
