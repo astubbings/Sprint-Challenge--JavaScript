@@ -29,15 +29,29 @@ Demonstrate your understanding of this week's concepts by answering the followin
 Edit this document to include your answers after each question. Make sure to leave a blank line above and below your answer so it is clear and easy to read by your team lead
 
 1. Describe the biggest difference between `.forEach` & `.map`.
+
   forEach executes your function once on each element in the array.
   map creates a new array with the results of your function stored in that new array.
 
 
 2. What is the difference between a function and a method?
+
    everything in JS is an object. a function is an object. scope says a method is a function that belongs in the scope of an object.
 
+
 3. What is closure?
-    functions create their own scope. if another functionB is nested inside functionA then functionB can inherit data from outside going to the parent functionA but it can't get data from functionC which is closure. bascially inheritance rules for data based on nesting.
+
+    functions create their own scope. if another functionB is nested inside functionA then functionB can inherit data from outside going to the parent functionA but it can't get data from functionC if that is a function within functionB. bascially inheritance rules for data based on nesting.
+    
+    functionA
+     const1 = one // accessible by functionA,functionB,functionC
+        functionB
+            functionC
+              const3 = three //only accessible by functionC
+            /functionC
+        /functionB
+    /functionA
+
 
 4. Describe the four rules of the 'this' keyword.
     --a--Window or Global object binding - when none of the other rules apply 'this' defaults to the window Object
@@ -50,7 +64,7 @@ Edit this document to include your answers after each question. Make sure to lea
 
 
 5. Why do we need super() in an extended class?
-super() behaves like .call and inherits functions of the parent object (the extends object points to the parent object)
+super() behaves like .call and inherits functions of the parent object (the extends object points to the parent object) inheritance accessibility of class objects
 
 ## Project Set up
 
